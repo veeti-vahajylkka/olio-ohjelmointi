@@ -1,5 +1,7 @@
 #include "car.h"
 #include "rectangle.h"
+#include "student.h"
+#include <memory>
 #include <iostream>
 
 int main() {
@@ -11,6 +13,8 @@ int main() {
     car.setYearModel(2020);
     
     car.printData();
+
+    std::cout << "-----" << std::endl;
 
     // ==== Suorakulmio ====
     Rectangle* rectangle = new Rectangle();
@@ -27,6 +31,27 @@ int main() {
         << std::endl;
 
     delete rectangle;
+
+    std::cout << "-----" << std::endl;
+
+    // ==== Opiskelija ====
+    std::unique_ptr<Student> student = std::make_unique<Student>();
+
+    student->setName("Erkki Esimerkki");
+    student->setStudentNumber(12345);
+    student->setAverage(4.6);
+
+    std::cout << "Opiskelijan nimi: "
+        << student->getName()
+        << std::endl;
+
+    std::cout << "Opiskelijanumero: "
+        << student->getStudentNumber()
+        << std::endl;
+
+    std::cout << "Keskiarvo: "
+        << student->getAverage()
+        << std::endl;
 
     return 0;
 }
