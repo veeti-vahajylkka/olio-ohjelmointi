@@ -1,8 +1,9 @@
 #include "Car.h"
-#include "Engine.h"
-#include "Wheel.h"
+#include <iostream>
 
-Car::Car() { }
+Car::Car() {
+    objEngine = Engine();
+}
 
 Car::Car(std::string b, std::string m) {
     brand = b;
@@ -14,10 +15,10 @@ void Car::setEngine() {
 }
 
 void Car::setWheels() {
-    objWheel1: Wheel(17, "kesarengas");
-    objWheel2: Wheel(17, "kesarengas");
-    objWheel3: Wheel(17, "kesarengas");
-    objWheel4: Wheel(17, "kesarengas");
+    Wheel objWheel1 (17, "kesarengas");
+    Wheel objWheel2 (17, "kesarengas");
+    Wheel objWheel3 (17, "kesarengas");
+    Wheel objWheel4 (17, "kesarengas");
 }
 
 std::string Car::getModel() {
