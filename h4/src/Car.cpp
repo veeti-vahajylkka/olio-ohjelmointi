@@ -13,17 +13,10 @@ void Car::setEngine() {
 }
 
 void Car::setWheels() {
-    objWheel1.setSize(17);
-    objWheel1.setType("kesarengas");
-
-    objWheel2.setSize(17);
-    objWheel2.setType("kesarengas");
-
-    objWheel3.setSize(17);
-    objWheel3.setType("kesarengas");
-
-    objWheel4.setSize(17);
-    objWheel4.setType("kesarengas");
+    objWheel1 = Wheel(17, "kesärengas");
+    objWheel2 = Wheel(17, "kesärengas");
+    objWheel3 = Wheel(17, "kesärengas");
+    objWheel4 = Wheel(17, "kesärengas");
 }
 
 std::string Car::getModel() {
