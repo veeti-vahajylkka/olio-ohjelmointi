@@ -4,11 +4,11 @@
 
 struct Car {
 private:
-    objEngine: Engine;
-    objWheel1: Wheel;
-    objWheel2: Wheel;
-    objWheel3: Wheel;
-    objWheel4: Wheel;
+    Engine objEngine;
+    Wheel objWheel1;
+    Wheel objWheel2;
+    Wheel objWheel3;
+    Wheel objWheel4;
     std::string model;
     std::string brand;
 public:
